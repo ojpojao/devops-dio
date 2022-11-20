@@ -12,13 +12,11 @@ USERS_ADD=($USERS_ADM $USERS_VEN $USERS_SEC)
 DEFAULT_PASS="Senha123"
 
 
-if ! [ -x "$(command -v openssl > /dev/null)" ]; then
-    "Installing OpenSSL"
+if ! [ -x "$(command -v openssl &>/dev/null)" ]; then
+    echo "Installing OpenSSL"
     export DEBIAN_FRONTEND=noninteractive
-    apt update && apt install -y openssl --no-install-recommends
+    apt update && apt install -y openssl --no-install-recommends &>/dev/null
 fi
-
-# setup adm
 
 echo "Creating group folders..."
 echo ""
