@@ -6,5 +6,5 @@ Download
 ````
 wget https://raw.githubusercontent.com/ojpojao/devops-dio/main/iac.sh
 chmod +x iac.sh
-sudo iac.sh
+sudo ./iac.sh
 ```
